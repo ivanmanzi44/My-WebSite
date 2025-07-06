@@ -1,0 +1,348 @@
+ * {
+margin: 0;
+padding: 0;
+text-decoration: none;
+box-sizing: border-box;
+}
+
+
+body {
+font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+background: linear-gradient(to right, #f9f9f9, #e6f0ff);
+text-decoration: none;
+line-height: 1.6;
+}
+
+/* Header and Logo */
+header {
+padding: 3px;
+display: flex;
+justify-content: space-between;
+}
+
+.header {
+display: flex;
+align-items: center;
+}
+.header img {
+width: 50px;
+height: 50px;
+border-radius: 50%;
+}
+
+.code-name {
+font-size: 23px;
+color: darkblue;
+}
+.code-name span {
+color: blueviolet;
+}
+
+.links {
+display: flex;
+margin: 20px;
+align-items: center;
+justify-content: center;
+height: 10vh;
+gap: 100px;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.links a {
+text-decoration: none;
+font-size: 20px;
+font-weight: 500;
+color: purple;
+}
+
+/* Main Layout */
+.containers {
+display: flex;
+justify-content: center;
+align-items: stretch;
+padding: 20px;
+gap: 0;
+height: 90vh;
+}
+
+.container,
+.editor-container {
+flex: 1;
+padding: 20px;
+background: white;
+border-radius: 8px;
+box-shadow: 0 0 10px rgba(0,0,0,0.1);
+overflow-y: auto;
+}
+
+.container {
+border-right: 3px solid black;
+margin-right: 0;
+}
+
+.editor-container {
+margin-left: 0;
+display: flex;
+flex-direction: column;
+}
+
+/* Lesson & Quiz */
+h1 {
+text-align: center;
+color: #007bff;
+}
+#lesson-title {
+color: #222;
+margin-bottom: 15px;
+}
+.controls {
+display: flex;
+justify-content: space-between;
+margin-top: 20px;
+padding: 10px;
+background: #111;
+text-align: center;
+}
+.controls button {
+padding: 10px 20px;
+background-color: #007bff;
+border: none;
+color: white;
+font-size: 14px;
+cursor: pointer;
+border-radius: 5px;
+}
+.controls button:hover {
+background-color: #0056b3;
+transform: scale(1.02);
+transition: all 0.2s ease-in-out;
+}
+#quiz-options button {
+margin: 5px 0;
+}
+.error-message {
+color: red;
+font-size: 14px;
+padding: 5px;
+background: #330000;
+display: none;
+}
+
+/* Editor Section /
+.editors {
+display: flex;
+flex: 1;
+background: #2e2e2e;
+}
+.editor {
+flex: 1;
+display: flex;
+flex-direction: column;
+height: 100%; / added for better sizing */
+}
+
+/* Increase size for raw textarea */
+textarea#html {
+width: 100%;
+height: 400px;
+resize: vertical;
+}
+
+/* Increase size of CodeMirror editor */
+.CodeMirror {
+min-height: 400px;
+width: 100%;
+font-size: 14px;
+background: #1e1e1e;
+color: #f8f8f2;
+}
+label {
+padding: 5px;
+background: #444;
+color: #ddd;
+font-size: 12px;
+}
+iframe {
+flex: 1;
+border: none;
+background: white;
+}
+.preview {
+height: 50%;
+border-top: 2px solid #000;
+margin-top: 10px;
+}
+
+/* Sections with Buttons (like HTML/CSS/JS blocks) */
+.section {
+padding: 20px;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 20px;
+}
+.section img {
+width: 90px;
+height: 90px;
+}
+.html, .css, .js {
+padding-top: 50px;
+box-shadow: 0px 2px 4px #000;
+align-items: center;
+text-align: center;
+width: 280px;
+height: 350px;
+}
+.html h3 {
+color: orangered;
+}
+.html h3 span {
+color: orangered;
+}
+.css h3 {
+color: blue;
+}
+.css h3 span {
+color: blue;
+}
+.js h3 {
+color: #000;
+}
+.js h3 span {
+color: #000;
+}
+.html p, .css p, .js p {
+margin-top: 30px;
+}
+.html button, .css button, .js button {
+margin-top: 30px;
+}
+
+/* Slider */
+.slider-arapper {
+position: relative;
+max-width: 48rem;
+margin: 0 auto;
+}
+.slider {
+display: flex;
+aspect-ratio: 16 / 9;
+overflow: auto;
+scroll-snap-type: x mandatory;
+scroll-behavior: smooth;
+box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+border-radius: 0.5rem;
+}
+.slider img {
+flex: 1 0 100%;
+scroll-snap-align: start;
+object-fit: cover;
+}
+.slider-nav {
+display: flex;
+column-gap: 5rem;
+position: absolute;
+bottom: 1.25rem;
+left: 50%;
+transform: translateX(-50%);
+z-index: 1;
+}
+.slider-nav a {
+width: 0.9rem;
+height: 0.9rem;
+border-radius: 50%;
+background-color: #fff;
+opacity: 0.75rem;
+transition: opacity ease 250ms;
+}
+.slider-nav a:hover {
+opacity: 1;
+}
+
+/* Dark Mode */
+body.dark {
+background: #121212;
+color: #f1f1f1;
+}
+body.dark .container {
+background: #1e1e1e;
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+body.dark button {
+background-color: transparent;
+color: #f1f1f1;
+}
+body.dark .editor-container {
+background: #1e1e1e;
+color: #f1f1f1;
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+body.dark .CodeMirror {
+background: #1e1e1e;
+color: #f8f8f2;
+}
+body.dark label {
+background: #333;
+color: #ccc;
+}
+body.dark .controls {
+background: #000;
+}
+body.dark iframe.preview {
+background: #2e2e2e;
+}
+
+/* Responsive Mobile View */
+@media (max-width: 768px) {
+.containers {
+flex-direction: column;
+height: auto;
+}
+
+.container,
+.editor-container {
+width: 100%;
+margin: 0;
+border-radius: 0;
+border-right: none;
+box-shadow: none;
+}
+
+.container {
+border-bottom: 3px solid black;
+}
+
+iframe.preview {
+height: 300px;
+}
+
+/* Mobile Run Code Button */
+.mobile-run-button {
+display: block;
+margin-top: 20px;
+padding: 12px 20px;
+font-size: 16px;
+cursor: pointer;
+background-color: #007bff;
+color: white;
+border: none;
+border-radius: 5px;
+}
+
+/* Initially hide editor */
+.editor-container {
+display: none;
+}
+
+/* Toggle views */
+.show-editor .editor-container {
+display: flex;
+}
+.show-editor .container {
+display: none;
+}
+}
+
+/* Hide run code button on desktop */
+.mobile-run-button {
+display: none;
+}

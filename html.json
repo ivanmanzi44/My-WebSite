@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "title": "What is a Variable?",
+    "content": "A variable is a container for storing data values. In JavaScript, we use keywords like var, let, or const to create variables.",
+    "quiz": {
+      "question": "Which keyword is used to declare a variable in JavaScript?",
+      "options": ["let", "echo", "print"],
+      "answer": "let"
+    }
+  },
+  {
+    "id": 2,
+    "title": "What is a Function?",
+    "content": "A function is a block of code designed to perform a particular task. Functions are executed when they are called.",
+    "quiz": {
+      "question": "Which keyword defines a function in JavaScript?",
+      "options": ["function", "func", "define"],
+      "answer": "function"
+    }
+  }
+]

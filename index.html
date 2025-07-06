@@ -1,0 +1,57 @@
+<!DOCTYPE html>  <html lang="en">  
+<head>  
+  <meta charset="UTF-8" />  
+  <meta name="viewport" content="width=device-width, initial-scale=1" />  
+  <title>CodeSeed - Online Coding Study</title>  
+  <link rel="stylesheet" href="style.css" />  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css" />  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/dracula.min.css" />  
+</head>  
+<body>    <header>  
+    <div class="header">  
+      <img src="gradient-coding-logo-template_23-2148809439.jpg" class="img-code" alt="Logo" />  
+      <h3 class="code-name">CodeSeed<span>...</span></h3>  
+    </div>  <div class="links">  
+  <a href="#"><i class="bi bi-house-door"></i></a>  
+  <a href="#"><i class="bi bi-journal-code"></i></a>  
+  <a href="#"><i class="bi bi-three-dots-vertical"></i></a>  
+  <button id="toggle-theme"><i class="bi bi-moon-fill"></i></button>  
+</div>
+
+  </header>    <section class="containers">  
+    <div class="container">  
+      <h1>Learn to Code: HTML Course</h1>  
+      <div id="lesson-container">  
+        <h2 id="lesson-title">Loading...</h2>  
+        <p id="lesson-content"></p>  
+        <div id="quiz-section" style="display: none;">  
+          <p id="quiz-question"></p>  
+          <div id="quiz-options"></div>  
+          <button onclick="submitAnswer()">Submit</button>  
+          <p id="quiz-result"></p>  
+        </div>  
+        <div class="controls">  
+          <button onclick="prevLesson()">⬅ Prev</button>  
+          <button onclick="nextLesson()">Next ➡</button>  
+        </div>  
+      </div>  <!-- Mobile Run Code Toggle Button -->  
+  <button id="run-code-toggle" class="mobile-run-button">Run Code</button>  
+</div>  
+  
+<div class="editor-container">  
+  <div class="editors">  
+    <div class="editor">  
+      <label for="html">index.html</label>  
+      <textarea id="html"></textarea>  
+    </div>  
+  </div>  
+  <div class="controls">  
+    <button onclick="runCode()">▶️ Run Code</button>  
+    <div id="error" class="error-message"></div>  
+  </div>  
+  <iframe id="preview" class="preview"></iframe>  
+</div>
+
+  </section>    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/htmlmixed/htmlmixed.min.js"></script>    <script src="htmlcourse.js"></script>  </body>  
+</html>
